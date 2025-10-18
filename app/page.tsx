@@ -6,7 +6,7 @@ import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Projects } from "@/components/projects"
 import { Contact } from "@/components/contact"
-import LiquidEther from '../components/LiquidEther';
+import LiquidEther from '@/components/LiquidEther';
 
 export default function HomePage() {
 
