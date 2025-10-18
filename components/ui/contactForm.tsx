@@ -75,7 +75,7 @@ export function ContactForm() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Lets Talk</Button>
+        <Button variant="outline" className="pointer-events-auto">Lets Talk</Button>
       </DialogTrigger>
       <DialogContent className="max-w-[425px] md: min-w-[38%] md: min-h-[80%]">
         <DialogHeader className="items-center justify-center">

@@ -7,28 +7,13 @@ import { SiGithub } from "react-icons/si"
 
 const projects =[
   {
-  title: "Project One",
-  description: "A responsive web application demonstrating clean UI and fast performance.",
+  index: 1,
+  title: "Codenames",
+  description: "A clone of the famous team vs team guessing game",
   image: "/project-management-dashboard.png",
-  gitlink: "#",
-  deployedLink: "",
-  tech: ["Next.js", "Tailwind CSS", "TypeScript"],
-  },
-  {
-  title: "Project Two",
-  description: "Full‑stack Next.js app with authentication and a polished design system.",
-  image: "/project-management-dashboard.png",
-  gitlink: "#",
-  deployedLink: "",
-  tech: ["Next.js", "Tailwind CSS", "TypeScript"],
-  },
-  { 
-  title: "Project Three",
-  description: "Data visualization dashboard featuring accessible charts and interactions.",
-  image: "/project-management-dashboard.png",
-  gitlink: "#",
-  deployedLink: "",
-  tech: ["Next.js", "Tailwind CSS", "TypeScript"],
+  gitlink: "https://github.com/0Blackraven/codenames",
+  deployedLink: "https://codename-olive.vercel.app/",
+  tech: ["React.js", "Tailwind CSS", "TypeScript", "Node.js", "Socket.io"],
   },]
 
 export function Projects() {
@@ -44,9 +29,9 @@ export function Projects() {
         </div>
         <div className="flex justify-center">
         <div className = "grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((p,idx) => (
+          {projects.map((p) => (
               
-              <Card className="h-full " key={idx}>
+              <Card className="h-full " key={p.index}>
                 <CardHeader>
                   <div className="flex justify-center">
                     <img
@@ -61,12 +46,12 @@ export function Projects() {
                   <div className="flex justify-center"><p>{p.description}</p></div>
                   <div className="flex justify-center mb-10">
                     {p.tech.map((tech)=>(
-                      <Badge variant="secondary" className="mr-1 ml-1">{tech}</Badge>
+                      <Badge variant="secondary" className="mr-1 ml-1" key={tech}>{tech}</Badge>
                     ))}
                   </div>
                   <div className="flex justify-evenly p-6 flex-row gap-10">
-                    <a href={p.gitlink}><SiGithub/></a>
-                    <a href={p.deployedLink}><SiGithub/></a>
+                    <a href={p.gitlink} className="pointer-events-auto"><SiGithub/></a>
+                    <a href={p.deployedLink} className="pointer-events-auto"><SiGithub/></a>
                   </div>
                 </CardContent>
               </Card>

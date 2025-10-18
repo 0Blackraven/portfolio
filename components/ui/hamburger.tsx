@@ -13,7 +13,7 @@ export const MyHamburger = () => {
     useClickAway(ref, () => setOpen(false));
 
     return (
-        <div ref={ref} className="md:hidden ">
+        <div ref={ref} className="md:hidden pointer-events-auto">
             <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
             <AnimatePresence>
                 {isOpen && (

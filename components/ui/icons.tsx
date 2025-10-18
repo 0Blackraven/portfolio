@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react"
 export function GithubIcon() {
     return (
         <motion.div
-            className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center"
+            className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto"
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.1, rotate: 360 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -31,7 +31,7 @@ export function GithubIcon() {
 export function LinkedinIcon() {
     return (
         <motion.div
-            className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center"
+            className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto"
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.1, rotate: 360 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -57,7 +57,7 @@ export function LinkedinIcon() {
 export function InstaIcon() {
     return (
         <motion.div
-            className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center"
+            className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto"
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.1, rotate: 360 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -85,7 +85,7 @@ export function InstaIcon() {
 export function XIcon() {
     return (
         <motion.div
-            className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center"
+            className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto"
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.1, rotate: 360 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}

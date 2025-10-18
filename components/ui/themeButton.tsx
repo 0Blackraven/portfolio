@@ -22,7 +22,7 @@ export function ThemeButton() {
   };
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-2 pointer-events-auto">
       <div className="hidden md:block">
         <Switch checked={theme === "dark"} onCheckedChange={toggleTheme} />
       </div>
