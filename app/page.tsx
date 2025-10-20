@@ -18,8 +18,9 @@ export default function HomePage() {
       />
         <div className="absolute inset-0 z-10 overflow-y-auto h-screen"
         style={{
-          pointerEvents: 'none',
-          touchAction: 'pan-y',
+          // pointerEvents: 'none',
+          userSelect: 'none',
+          // touchAction: 'pan-y',
         }}>
           <SiteHeader />
           <main id="main" className="container mx-auto px-4 py-10 md:py-16 space-y-20">
