@@ -14,10 +14,10 @@ export function About() {
         </div>
         <div className="md:col-span-2 space-y-2 md: pr-[10%]">
           <h2 id="about-title" className="text-1xl md:text-3xl font-semibold tracking-tight">
-            Joydeep's Bio:
+            Joydeep&apos;s Bio:
           </h2>
           <p className="text-muted-foreground md:text-xl">
-            I’m a full‑stack developer focused on building performant, accessible, and maintainable products. I enjoy
+            I&apos;m a full stack developer focused on building performant, accessible, and maintainable products. I enjoy
             turning complex problems into simple, beautiful solutions
           </p>
           <div className=" flex flex-col md:flex flex-row gap-2 md: pr-[10%]">

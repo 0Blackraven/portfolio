@@ -82,7 +82,7 @@ export function ContactForm() {
           <DialogTitle className="md:text-2xl">Lets Work Together</DialogTitle>
           <DialogDescription className="md:text-xl text-center">
             Have a project in mind or simply want to connect? <br/>Fill out the form
-            and I'll get back to you as soon as I can 
+            and I&apos;ll get back to you as soon as I can 
           </DialogDescription>
         </DialogHeader>
 
