@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "./ui/badge"
 import { SiGithub } from "react-icons/si"
+import Image from "next/image"
 
 const projects =[
   {
@@ -33,8 +34,10 @@ export function Projects() {
               <Card className="h-full " key={p.index}>
                 <CardHeader>
                   <div className="flex justify-center">
-                    <img
+                    <Image
                       src={p.image || "/placeholder.svg"}
+                      width={90}
+                      height={60}
                       alt={`${p.title} screenshot`}
                       className="w-[90%] h-60 object-cover rounded-md ring-1 ring-border"
                     />

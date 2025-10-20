@@ -1,14 +1,15 @@
-import { Pointer } from "lucide-react";
-
+import Image from "next/image";
 
 export function About() {
   return (
     <section id="about" aria-labelledby="about-title" className="scroll-mt-24">
       <div className="grid md:grid-cols-3 gap-8 items-start">
         <div className="flex justify-center md:pt-[10%] md:col-span-1">
-          <img
-            src="./potrait.jpg"
+          <Image
+            src="/potrait.png"
             alt="Portrait of Your Name"
+            width={80}
+            height={160}
             className="w-40 h-40 md:w-56 md:h-56 rounded-lg object-cover ring-1 ring-border"
           />
         </div>
