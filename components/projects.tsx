@@ -2,7 +2,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "./ui/badge"
-// import { ProjectDialog } from "./ui/projectDialog"
 import { SiGithub } from "react-icons/si"
 
 const projects =[
