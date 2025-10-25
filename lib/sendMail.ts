@@ -2,7 +2,8 @@
 
 import nodemailer from "nodemailer"
 import dotenv from "dotenv"
-import type { serviceType } from "@/components/ui/contactForm"
+import { serviceType } from "@/components/ui/contactForm"
+import { number } from "framer-motion"
 
 dotenv.config()
 
@@ -14,18 +15,34 @@ export async function sendMail(data: {
     message: string;
 }) {
     try{
+
+    const service = (number: serviceType|null) =>{
+        const num = Number(number);
+        console.log(num);
+        if(num === null || num === undefined)
+            return "No Subject Selected";
+
+        switch(num){
+            case 0:
+                return "Full Stack Development"; 
+            case 1:
+                return "Back End Development";   
+            case 3:
+                return "Front End Development"; 
+            case 4:
+                return "Others"; 
+    }}
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth:{
             user: process.env.SMTP_USERNAME,
             pass: process.env.SMTP_PASSWORD
         }});
-
         const mailOptionsToMe = {
         from: `"${data.name}" <${process.env.SMTP_USERNAME}>`,
         to: process.env.MAIL_RECEIVER_ADDRESS,
         replyTo: data.email,
-        subject: data.service ? `New Inquiry about ${data.service}` : "New Contact Form Submission",
+        subject: `New Inquiry about ${service(data.service)}`,
         text: `
             Name: ${data.name}
             Email: ${data.email}
@@ -37,7 +54,7 @@ export async function sendMail(data: {
             <p><strong>Name:</strong> ${data.name}</p>
             <p><strong>Email:</strong> ${data.email}</p>
             <p><strong>Mobile:</strong> ${data.number}</p>
-            <p><strong>Subject:</strong> ${data.service}</p>
+            <p><strong>Subject:</strong> ${service(data.service)}</p>
             <p><strong>Message:</strong></p>
             <p>${data.message}</p>
         `,
@@ -47,7 +64,7 @@ export async function sendMail(data: {
         const mailOptionsToClient = {
         from: `"JOYDEEP DAS" <${process.env.SMTP_USERNAME}>`,
         to: data.email,
-        subject: data.service ? `Re: ${data.service}` : "Re: Contact Form Submission",
+        subject: service(data.service),
         text: `
             Name: ${data.name}
             Email: ${data.email}
@@ -62,12 +79,12 @@ export async function sendMail(data: {
             <p><strong style="font-size: 18px">Name:</strong> ${data.name}</p>
             <p><strong style="font-size: 18px">Email:</strong> ${data.email}</p>
             <p><strong style="font-size: 18px">Mobile:</strong> ${data.number}</p>
-            <p><strong style="font-size: 18px">Subject:</strong> ${data.service}</p>
+            <p><strong style="font-size: 18px">Subject:</strong> ${service(data.service)}</p>
             <p><strong style="font-size: 18px">Message:</strong></p>
             <p>${data.message}</p>
             <p style="font-size: 18px; margin-top: 70px">Thank you again. Hope to see u in next few days</p>
             <p>Warm regards,</p>
-            <p><strong>Samannyo Pal</strong></p>
+            <p><strong>Joydeep Das</strong></p>
         `,
     }
 
