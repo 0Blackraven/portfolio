@@ -16,6 +16,24 @@ const projects = [
     deployedLink: "https://codename-olive.vercel.app/",
     tech: ["React.js", "Tailwind", "TypeScript", "Node.js", "Socket.io"],
   },
+  {
+    index: 2,
+    title: "RLox Interpreter",
+    description: "A Tree-Walk Interpreter in Rust",
+    image: "/Screenshot 2026-06-11 105643.png",
+    gitlink: "https://github.com/0Blackraven/MyInterpreter",
+    // deployedLink: "https://codename-olive.vercel.app/",
+    tech: ["Rust", "Crossterm"],
+  },
+  {
+    index: 3,
+    title: "Web Scrapper",
+    description: "A webscrapper bilt in Go",
+    image: "/Screenshot 2026-06-11 105806.png",
+    gitlink: "https://github.com/0Blackraven/webscrapper",
+    // deployedLink: "https://codename-olive.vercel.app/",
+    tech: ["Go", "Redis", "Goquery"],
+  },
 ];
 
 export function Projects() {
@@ -39,11 +57,10 @@ export function Projects() {
             {projects.map((p) => (
               <Card className="h-full group" key={p.index}>
                 <CardHeader>
-                  <div className="relative w-full h-full rounded-md overflow-hidden">
+                  <div className="relative w-full aspect-video rounded-md overflow-hidden">
                     <Image
                       src={p.image || "/placeholder.svg"}
-                      width={3824}
-                      height={2012}
+                      fill
                       alt={`${p.title} screenshot`}
                       className="object-cover transition-all duration-500 group-hover:blur-sm"
                     />
@@ -58,13 +75,15 @@ export function Projects() {
                         >
                           <GithubIcon />
                         </a>
-                        <a
-                          href={p.deployedLink}
-                          target="_blank"
-                          className="pointer-events-auto hover:scale-110 transition-transform"
-                        >
-                          <ExternalLinkIcon />
-                        </a>
+                        {p.deployedLink && (
+                          <a
+                            href={p.deployedLink}
+                            target="_blank"
+                            className="pointer-events-auto hover:scale-110 transition-transform"
+                          >
+                            <ExternalLinkIcon />
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>

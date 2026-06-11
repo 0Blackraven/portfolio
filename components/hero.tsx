@@ -18,7 +18,7 @@ export function Hero() {
             <a href="#projects">My Works</a>
           </Button>
           <Button variant="secondary" asChild>
-            <a href="https://drive.google.com/file/d/1GQNf9pL1fiWuBUEyReMRZa9213osUK5F/view" target="blank"> Resume </a>
+            <a href="https://drive.google.com/file/d/1y59u46H8__2HEyEUbxDZdQTkW1SRsOmF/view?usp=drive_link" target="blank"> Resume </a>
           </Button>
 
         </div>
