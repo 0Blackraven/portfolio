@@ -5,6 +5,7 @@ import { Badge } from "./ui/badge";
 import { GithubIcon, ExternalLinkIcon } from "@/components/ui/icons";
 import Image from "next/image";
 import { useState } from "react";
+import { Description } from "@radix-ui/react-dialog";
 
 const projects = [
   {
@@ -28,12 +29,21 @@ const projects = [
   {
     index: 3,
     title: "Web Scrapper",
-    description: "A webscrapper bilt in Go",
+    description: "A webscrapper built in Go",
     image: "/Screenshot 2026-06-11 105806.png",
     gitlink: "https://github.com/0Blackraven/webscrapper",
     // deployedLink: "https://codename-olive.vercel.app/",
     tech: ["Go", "Redis", "Goquery"],
   },
+  {
+    index: 4,
+    title: "Moshi Moshi",
+    description: "A website design GSAP animations",
+    image: "/Screenshot 2026-07-08 132820.png",
+    gitlink: "https://github.com/0Blackraven/MoshiMoshi",
+    deployedLink: "https://moshi-moshi-virid.vercel.app/",
+    tech: ["GSAP", "React"]
+  }
 ];
 
 export function Projects() {
