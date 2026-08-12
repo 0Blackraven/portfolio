@@ -35,13 +35,13 @@ export function Contact() {
           className="sekuya-regular text-4xl md:text-5xl lg:text-6xl uppercase tracking-tighter text-foreground border-b border-foreground pb-8"
           variants={childFade}
         >
-          Let's talk.
+          Let&apos;s talk.
         </motion.h2>
         
         <motion.div className="grid md:grid-cols-2 gap-12 md:gap-16" variants={childFade}>
           <div className="space-y-8 md:space-y-12">
             <p className="font-mono text-sm md:text-lg tracking-widest uppercase text-foreground leading-relaxed">
-              I'm currently open to new opportunities and collaborations. Drop a line.
+              I&apos;m currently open to new opportunities and collaborations. Drop a line.
             </p>
             <div className="flex gap-8 pointer-events-auto">
               <a href="https://github.com/0Blackraven" className="hover:opacity-50 transition-opacity"><GithubIcon className="w-8 h-8" /></a>

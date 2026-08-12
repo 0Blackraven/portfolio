@@ -52,7 +52,7 @@ export function About() {
               className="font-mono text-sm md:text-base leading-relaxed text-foreground uppercase tracking-widest max-w-2xl"
               variants={childFade}
             >
-              I'm a full stack developer focused on building performant, accessible, and maintainable products. I enjoy turning complex problems into simple, beautiful solutions.
+              I&apos;m a full stack developer focused on building performant, accessible, and maintainable products. I enjoy turning complex problems into simple, beautiful solutions.
             </motion.p>
             
             <motion.div
