@@ -22,9 +22,9 @@ const childFade: Variants = {
 
 export function Contact() {
   return (
-    <section id="contact" aria-labelledby="contact-title" className="scroll-mt-10 pb-32 mt-10">
+    <section id="contact" aria-labelledby="contact-title" className="scroll-mt-20 pb-20 md:pb-32">
       <motion.div
-        className="container mx-auto px-8 space-y-16"
+        className="container mx-auto px-5 md:px-8 space-y-10 md:space-y-16"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -38,9 +38,9 @@ export function Contact() {
           Let's talk.
         </motion.h2>
         
-        <motion.div className="grid md:grid-cols-2 gap-16" variants={childFade}>
-          <div className="space-y-12">
-            <p className="font-mono text-base md:text-lg tracking-widest uppercase text-foreground leading-relaxed">
+        <motion.div className="grid md:grid-cols-2 gap-12 md:gap-16" variants={childFade}>
+          <div className="space-y-8 md:space-y-12">
+            <p className="font-mono text-sm md:text-lg tracking-widest uppercase text-foreground leading-relaxed">
               I'm currently open to new opportunities and collaborations. Drop a line.
             </p>
             <div className="flex gap-8 pointer-events-auto">

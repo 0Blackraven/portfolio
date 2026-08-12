@@ -9,8 +9,8 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 z-40 w-full pt-8 pb-4">
-      <div className="container mx-auto px-8 flex items-center justify-between">
+    <header className="absolute top-0 z-40 w-full pt-6 md:pt-8 pb-4">
+      <div className="container mx-auto px-5 md:px-8 flex items-center justify-between">
         <nav className="font-bold">
           <a href="#hero" className="text-xl md:text-2xl uppercase tracking-widest font-mono">0BlackRaven</a>
         </nav>

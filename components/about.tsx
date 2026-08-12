@@ -30,12 +30,12 @@ const childFade: Variants = {
 
 export function About() {
   return (
-    <section id="about" aria-labelledby="about-title" className="scroll-mt-32 border-y border-foreground mt-32">
-      <div className="container mx-auto px-8 py-24 md:py-32">
+    <section id="about" aria-labelledby="about-title" className="scroll-mt-20 border-y border-foreground">
+      <div className="container mx-auto px-5 md:px-8 py-16 md:py-32">
         <div className="grid md:grid-cols-12 gap-12 md:gap-24 items-start">
           
           <motion.div
-            className="md:col-span-7 flex flex-col justify-center space-y-12 md:space-y-16 order-2 md:order-1 pt-8 md:pt-0"
+            className="md:col-span-7 flex flex-col justify-center space-y-8 md:space-y-16 order-2 md:order-1 pt-4 md:pt-0"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -56,7 +56,7 @@ export function About() {
             </motion.p>
             
             <motion.div
-              className="grid grid-cols-2 gap-8 pt-8 border-t border-foreground/30 font-mono text-xs uppercase tracking-widest"
+              className="grid grid-cols-2 gap-6 md:gap-8 pt-8 border-t border-foreground/30 font-mono text-[10px] md:text-xs uppercase tracking-widest"
               variants={childFade}
             >
               <div className="flex flex-col gap-3">

@@ -5,12 +5,12 @@ import { motion } from "framer-motion"
 export function Hero() {
   return (
     <section id="hero" aria-labelledby="hero-title" className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20">
-      
+
       {/* Massive name — clips upward into view */}
-      <div className="absolute top-[20%] -left-4 md:-left-12 overflow-hidden">
+      <div className="absolute top-[20%] -left-2 md:-left-12 overflow-hidden">
         <motion.h1
           id="hero-title"
-          className="sekuya-regular text-[6rem] md:text-[12rem] lg:text-[18rem] leading-none text-foreground tracking-tighter opacity-90 select-none whitespace-nowrap"
+          className="sekuya-regular text-[4.5rem] sm:text-[8rem] md:text-[12rem] lg:text-[18rem] leading-none text-foreground tracking-tighter opacity-90 select-none whitespace-nowrap"
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: "0%", opacity: 0.9 }}
           transition={{
@@ -19,14 +19,14 @@ export function Hero() {
             delay: 0.3,
           }}
         >
-          JOYDEEP DAS
+          JOYDEEP
         </motion.h1>
       </div>
 
       {/* Tagline + links — fade up after name lands */}
-      <div className="container mx-auto px-8 relative z-10 flex flex-col items-end justify-end h-full mt-64 md:mt-96 pb-20">
+      <div className="container mx-auto px-5 md:px-8 relative z-10 flex flex-col items-end justify-end h-full mt-48 md:mt-96 pb-12 md:pb-20">
         <motion.div
-          className="max-w-lg space-y-12 text-right"
+          className="max-w-lg space-y-8 md:space-y-12 text-right"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -36,7 +36,7 @@ export function Hero() {
           }}
         >
           <p className="text-xl md:text-4xl font-mono uppercase tracking-widest text-foreground leading-snug">
-            90% figuring it out.<br/>
+            90% figuring it out.<br />
             10% making it work.
           </p>
 
@@ -55,7 +55,7 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </div>
-      
+
     </section>
   )
 }

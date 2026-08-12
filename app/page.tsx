@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <div className="w-full min-h-screen flex flex-col" style={{userSelect:"none"}}>
       <SiteHeader />
-      <main id="main" className="container mx-auto px-4 py-10 md:py-16 space-y-32 md:space-y-48 flex-grow">
+      <main id="main" className="container mx-auto px-4 md:px-8 py-8 md:py-16 space-y-20 md:space-y-40 flex-grow">
         <Hero />
         <About />
         <Projects />
