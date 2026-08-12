@@ -34,3 +34,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI / Impeccable Agent Files
+.impeccable/
+.agents/
+.cursor/
+.gemini/
+.kiro/
+.codex/
+PRODUCT.md
+DESIGN.md
+

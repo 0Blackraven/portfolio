@@ -2,10 +2,14 @@ import { motion } from "framer-motion"
 import { SiX } from "react-icons/si";
 import { useState, useEffect, useRef } from "react"
 
-export function GithubIcon() {
+interface IconProps {
+    className?: string;
+}
+
+export function GithubIcon({ className }: IconProps) {
     return (
         <motion.div
-            className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto"
+            className={`w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto ${className || ""}`}
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.1, rotate: 360 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -28,10 +32,10 @@ export function GithubIcon() {
     )
 }
 
-export function LinkedinIcon() {
+export function LinkedinIcon({ className }: IconProps) {
     return (
         <motion.div
-            className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto"
+            className={`w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto ${className || ""}`}
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.1, rotate: 360 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -54,10 +58,10 @@ export function LinkedinIcon() {
     )
 }
 
-export function ExternalLinkIcon() {
+export function ExternalLinkIcon({ className }: IconProps) {
   return (
     <motion.div
-      className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto"
+      className={`w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto ${className || ""}`}
       initial={{ scale: 1 }}
       whileHover={{ scale: 1.1, rotate: 360 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -82,10 +86,10 @@ export function ExternalLinkIcon() {
   );
 }
 
-export function InstaIcon() {
+export function InstaIcon({ className }: IconProps) {
     return (
         <motion.div
-            className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto"
+            className={`w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto ${className || ""}`}
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.1, rotate: 360 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -110,10 +114,10 @@ export function InstaIcon() {
     )
 }
 
-export function XIcon() {
+export function XIcon({ className }: IconProps) {
     return (
         <motion.div
-            className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto"
+            className={`w-6 h-6 md:w-7 md:h-7 flex items-center justify-center pointer-events-auto ${className || ""}`}
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.1, rotate: 360 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
